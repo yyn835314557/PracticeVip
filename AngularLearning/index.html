@@ -2,9 +2,15 @@
 <html ng-app>
     <head>
         <script src="AngularJs-1.3.10/angular.min.js"></script>
-        <script src="script.js"></script>
     </head>
     <body>
+        <script>
+it('should show of angular binding', function() {
+   expect(binding('qty * cost')).toEqual('$19.95');
+   input('qty').enter('2');
+   input('cost').enter('5.00');
+   expect(binding('qty * cost')).toEqual('$10.00');});
+</script>
         <div ng-controller="InvoiceCntl">
             <b>Invoice:</b>
             <br>
@@ -23,10 +29,4 @@
        </div>
     </body>
 </html>
-<script>
-it('should show of angular binding', function() {
-   expect(binding('qty * cost')).toEqual('$19.95');
-   input('qty').enter('2');
-   input('cost').enter('5.00');
-   expect(binding('qty * cost')).toEqual('$10.00');});
-</script>
+
