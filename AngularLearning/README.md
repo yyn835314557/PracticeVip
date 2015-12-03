@@ -8,3 +8,14 @@ Software Development Intern in VIP
 * 模板(Templates): 展现应用的视图
 * 应用程序逻辑(Logic)和行为(Behavior)
 * 模型数据(Data):
+
+#核心特性:
+
+- MVC
+- Module
+- Directive
+- Two-Way Data Binding(jQueryUI、BackBone、Flex都是 One-Way Data Binding)
+
+# 调试工具:
+
+- Angular调试插件Batarang
