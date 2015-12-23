@@ -23,6 +23,23 @@ My Javascript Learning
  - onsubmit: 用户提交了表单
  - onunload: 用户离开了页面
 
+  ```
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Barely a script at all</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            document.getElementById("myMessage").innerHTML = "Hello, Cleverland!";
+        }
+    </script>
+  </head>
+  <body>
+  <h1 id="myMessage"></h1>
+  </body>
+  </html>
+  ```
+
 # 基本概念: 6个属性
 
 - async: 表示立即下载脚本(针对外部脚本)，但是不妨碍页面中的其他操作(下载其他资源或等待加载其他脚本)
@@ -36,7 +53,6 @@ My Javascript Learning
 可以在页面中内嵌 Javascript 代码和外部包含 JavaScript 文件
 
  ```
-    //
     <script type="text/javascript">
         function sayScript(){
             alert("\/script);
@@ -170,16 +186,6 @@ My Javascript Learning
 
  ```CSS
  .moveTitle{
-    font: bold 14px;
-    color: #FF0099;
- } 
- <p>We're currently showing <span class="moveTitle">The Aviator</span> and <span class="moveTitle>The Outlaw</span></p>>
- ```
-
- - id: 标识出的元素对于文档是唯一的
-
-  ```CSS
-  #theaterName{
     font: bold 28px;
     color: #FF0000;
   }
