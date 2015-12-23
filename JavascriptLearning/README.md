@@ -8,6 +8,21 @@ My Javascript Learning
  - 文档对象模型(DOM)
  - 浏览器对象模型(BOM)
 
+# 处理事件: 用户在访问页面执行的操作(提交表单，在图像上移动鼠标)。JS 使用 事件处理程序(event handler) 的命令来处理事件,用户在页面上的操作会 触发脚本中的事件处理程序
+
+ - onabort: 用户终止了页面的加载
+ - onblur: 用户离开了对象
+ - onchange: 用户修改了对象
+ - onclick: 用户单机了对象
+ - onerror: 脚本遇到了一个错误
+ - onfocus: 用户激活了对象
+ - onload: 对象完成了加载
+ - onmouseover: 鼠标指针移动到对象上
+ - onmouseout: 鼠标指针离开了对象
+ - onselect: 用户选择了对象的内容
+ - onsubmit: 用户提交了表单
+ - onunload: 用户离开了页面
+
 # 基本概念: 6个属性
 
 - async: 表示立即下载脚本(针对外部脚本)，但是不妨碍页面中的其他操作(下载其他资源或等待加载其他脚本)
@@ -148,3 +163,25 @@ My Javascript Learning
  alert(typeof 95);// "number"
  // note: typeof 是操作符不是函数
  ```
+
+# class and id: CSS 样式表在规则中使用这些属性定义页面的外观，而JavaScript 文件在代码中使用这些属性来影响页面上元素的行为。
+
+ - class: 标识出可能多次使用的元素
+
+ ```CSS
+ .moveTitle{
+    font: bold 14px;
+    color: #FF0099;
+ } 
+ <p>We're currently showing <span class="moveTitle">The Aviator</span> and <span class="moveTitle>The Outlaw</span></p>>
+ ```
+
+ - id: 标识出的元素对于文档是唯一的
+
+  ```CSS
+  #theaterName{
+    font: bold 28px;
+    color: #FF0000;
+  }
+  <h1 id="theaterName">The Raven Theater Presents</h1>
+  ```
