@@ -1,4 +1,4 @@
-My Javascript Learning
+#My Javascript Learning
 
 ***
 
@@ -191,3 +191,202 @@ My Javascript Learning
   }
   <h1 id="theaterName">The Raven Theater Presents</h1>
   ```
+
+# html 基本属性
+
+ * 一个基本的table: table>(thead>tr>th*5)+(tbody>tr>td*5)+(tfoot>tr>td*5)
+
+   ```html
+    <table width="100%" border="1">
+        <col></col>
+        <caption>table的标题</caption>
+       <thead>
+           <tr>
+                <th>Month</th>
+                <th>Savings</th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jannuary</td>
+                <td>$100</td>
+            </tr>
+             <tr>
+                <td>February</td>
+                <td>$80</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Sum</td>
+                <td>$180</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+   ```
+
+ * 列表: dl>(dt+dd)*2
+    - 无序: ul>li 类似 md 的 *-
+    - 有序: ol>li
+    - 选择列表: select>(optgroup>option*2)*2,optgroup定义选项组
+        ```
+        <select name="" id="">
+            <optgroup label="Swedish Cars">
+                <option value ="volvo">Volvo</option>
+                <option value ="saab">Saab</option>
+            </optgroup>
+            <optgroup>
+                <option value ="mercedes">Mercedes</option>
+                <option value ="audi">Audi</option>
+            </optgroup>
+        </select>
+        ```
+    - 选择列表: <datalist> 与 input 元素配合使用该元素，来定义 input 可能的值。datalist 及其选项不会被显示出来，它仅仅是合法的输入值列表,使用 input 元素的 list 属性来绑定 datalist。
+        ```
+        <input id="" list="cars" />
+        <datalist id="cars">
+            <option value="BMW"></option>
+            <option value="Ford"></option>
+            <option value="Volvo"></option>
+        </datalist>
+        ```
+
+ * 表单: form 用于向服务器传输数据，元素是块级元素，前后会产生折行,在HTML表单中使用 input元素来创建按钮
+    - input : `type="button\checkbox\file\hidden\image\password\radio\reset\submit\text"`
+    - fieldset: 将表单内的相关元素分组，表单内容的一部分打包，生成一组相关表单的字段
+    - menus
+    - textarea
+    - legend: 为 fieldset 元素定义标题
+    - label: 为 input 元素定义标注
+    - keygen: 表单的密钥对生成器字段，当提交表单时，私钥存储在本地，公钥发送到服务器
+    - oninput:
+
+    ```
+    <form action="表单提交的地址" method="get/post"></form>
+        <p>firstName: <input type="text" name="fname" /></p>
+        <p>lastName: <input type= "text" name="lname" /></p>
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="male" />
+        Encryption: <keygen name="security" />
+        <input type="submit" value="Submit" />
+    </form>
+    <form oninput="x.value = parseInt(a.value) + parseInt(b.value)">0
+       <input type="range" id="a" value="50"> 100 + 
+       <input type="number" id="b" value="50">=
+       <output name="x" for="a b"></output>
+    </form> 
+    ```
+ 
+ * 页面框架: frameset>frame*3,noframes为那些不支持框架的浏览器显示文本
+
+    ```
+    <frameset cols="25%,50%,25%">
+        <noframes>
+             <body>Your browser does not handle frames!</body>
+        </noframes>
+        <frame src="1.html" />
+        <frame src="2.html" />
+        <frame src="3.html" />
+    </frameset>
+    ```
+
+ * <button type="button">按钮</button> 在元素内部可以放置内容，比如文本或者图像这是使用input与该元素创建按钮的不同之处。
+ * 多行输入文本框: <textarea row="3"  cols="20">在这里面输入内容</textarea>
+ * 定义时间和日期: <time>9:00</time>,<time datetime="2010-02-14">情人节</time>
+ * <canvas>标签定义图形(图表和图像)，只是图形容器，使用脚本来绘制图形
+
+ ```
+ <canvas>your broswer is not support canvas tag</canvas>
+ <script type="text/javascript">
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#FF0000';
+    ctx.fillRect(0,0,80,100);
+ </script>
+ ```
+
+ * 播放视频(video),音频(audio): track(字幕)，source(2分源文件浏览器选择支持的文件)
+
+ ```
+ <video width="320" height="240" controls="controls">
+      <source src="forrest_gump.mp4" type="video/mp4" />
+      <source src="forrest_gump.ogg" type="video/ogg" />
+      <track kind="subtitles" src="subs_chi.srt" srclang="zh" label="Chinese">
+      <track kind="subtitles" src="subs_eng.srt" srclang="en" label="English">
+ </video>
+ ```
+
+ * 页面上所有链接规定默认地址或者默认目标，浏览器随后将不再使用当前文档的 URL，而使用指定的基本 URL 来解析所有的相对 URL. <a>、<img>、<link>、<form> 都有作用
+
+    ```
+    <head>
+    <base href="http://baidu.com/i/"/>
+    <base target="_blank"/>;
+    </head>
+    <body>
+    <img src="eg_smile.gif"/>
+    <a href="http:www.baidu.com">百度</a>
+    </body>
+    ```
+
+ * 定义图像映射中区域(图像映射指的是带有可点击区域的图像)，area元素总是嵌套在 map 标签中 
+
+    ```
+    <img src="planets.jpg" border="0" usemap="#planetmap" alt="Planets" />
+    <map name="planetmap" id="planetmap">
+        <area shape="circle" coords="180,139,14" href ="venus.html" alt="Venus" />
+        <area shape="circle" coords="129,161,10" href ="mercur.html" alt="Mercury" />
+        <area shape="rect" coords="0,0,110,260" href ="sun.html" alt="Sun" />
+    </map>
+    ```
+ 
+ * 元素提供有关页面的元信息(针对搜索引擎和更新频度的描述和关键词)，元数据总是以名称/值的形式被成对传递的。
+     - 必须属性: content(定义与 http-equiv 或 name 属性相关的元信息)
+     - 可选属性:
+        - http-equiv
+        - name
+        - scheme
+ * 定义导航链接: nav, `nav>a*3`
+ * 链接样式表，定义文档与外部资源的关系 `<head><link rel="stylesheet" type="text/css" href="theme.css /></head>`
+ * 定义文档或文章的作者的联系信息: `<address>Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 作者的个人信息</address>`
+ * 简称或缩写: `<abbr title="People's Republic of China">PRC</abbr>` ,通过对缩写进行标记，能够为浏览器、拼写检查和搜索引擎提供有用的信息
+ * 定义超链接: `<a href="http://www.baidu.com">百度</a>`
+ * <style>标签为文档定义样式信息, `<style type="text/css">h1{color: red},p{color: blue}</style>`
+ * 为表格定义不同的对齐方式: `<col align="right"></col>`
+ * 短语元素:标准属性(id,class.title.style.dir.lang,xml:lang)
+    - 强调: <em> <strong>
+    - 定义一个定义项目: dfn
+    - 定义文本: code(定义计算机代码文本), samp(定义样本文本), kbd(定义键盘文本)
+    - 定义变量: var()
+    - 定义引用: cite(对参考文献的引用进行定义，书籍或杂志)
+ * 标量测量(已知范围或分数值内,gauge): meter，不能用于指示进度，若使用，用<progress>标签: `<meter value="3" min="0" max="10">十分之三</meter><meter value="0.6">60%</meter>`
+ * 标签标示任务的进度 `<progress value="22" max="100"></progress>`
+ * 下划线: <u></u>,<ins></ins>
+ * 删除线: <del></del>,<s></s>,strike
+ * 带有记号的文本: <mark></mark>
+ * 定义短引用: <q></q>
+ * 带有 word break opportunity 的文本: <wbr>单词换行时机</wbr>
+ * 文档中的区段: <section></section>
+ * 改变字体大小: <big></big>，<small></small>
+ * span 标签组合行内元素，当对它应用样式时它才会产生视觉上的变化,应用 id 或者 class 属性
+ * <summary> 标签包含 details 元素的标题，"details" 元素用于描述有关文档或文档片段的详细信息。<details><summary>包含在summary里面</summary>details的内容</details>
+ * 标签规定独立的自包含内容, <article>独立的自包含内容</article>
+ * 作为文章的侧栏定义其所处内容之外的内容: <aside></aside>
+ * 规定粗体文本 <b></b>
+ * 规定斜体文本 <i></i>
+ * 元素可覆盖默认文本的方向 <bdo dir="rtl"></bdo> dir有两个属性 ltr和rtl
+ * <blockquote>定义块引用从常规文本中分离出来,左右两边进行缩进</blockquote>
+ * 定义嵌入的内容，比如插件 <embed src="helloworld.swf" />
+ * 规定文本的字体、字体尺寸、字体颜色 <font size = "3" color="red">This is a text!</font>
+ * 规定独立的流内容（图像、图表、照片、代码等等），使用 figcaption 元素为 figure 添加标题 <figure><figcaption>这里面是figcaption</figcaption><img src="..." height="" width=""></figure>
+ * `<iframe src="/i/eg_landscape.jpg"></iframe>` 内联框架
+ * 标签规定文档的主要内容 <main>,一个文档中,不能出现一个以上的 <main> 元素。<main> 元素不能是<article>、<aside>、<footer>、<header> 或 <nav>元素的后代
+ * pre 元素可定义预格式化的文本。被包围在 pre 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体.用来表示计算机的源代码
+ * <rt> 标签定义字符（中文注音或字符）的解释或发音。
+ * <rp> 标签在 ruby 注释中使用，以定义不支持 ruby 元素的浏览器所显示的内容
+ * 向HTML代码添加一个对象:定义一个嵌入的对象。请使用此元素向您的 XHTML 页面添加多媒体。此元素允许您规定插入 HTML 文档中的对象的数据和参数，以及可用来显示和操作数据的代码
+    - param 参数定义用于对象的 run-time 设置
+    - 不要对图像使用 <object> 标签，使用<img>标签代替
