@@ -57,7 +57,8 @@
 
 * 总结:
  ```
-     function openWindow(){
+ <script type="text/javascript">
+  function openWindow(){
        var message = confirm("是否打开"){
            if(message==true){
                var dialog = prompt("请输入网址","http：//www.imooc.com/"){
@@ -66,4 +67,6 @@
            }
        }
     }
+ </script>
+ <input name = "button" type="button" onclick="openWindow()" value="请点击按钮" />
  ```

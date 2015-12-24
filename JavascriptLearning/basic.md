@@ -38,3 +38,40 @@ if (ans) {
  	</h2>
  </body>
  </html>
+
+* 使用 JS 改进链接
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Welcome to our site</title>
+ 	<script src=".js"></script>
+ </head>
+ <body>
+ 	<h2 class="centered">Hey check out <a href="http://..." id="redirect">my cat's Web site</a></h2>
+ </body>
+ </html>
+ <script type="text/javascript">
+ window.onload = initAll;
+ function initAll(){
+ 	document.getElementById("redirect").onclick = initRedirect;
+ }
+ function initRedirect(){
+ 	alert("We are not responsible for the content of pages outside our site");
+ 	window.location = this;
+ 	return false;
+ }
+ </script>
+
+* 使用多级条件
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ </head>
+ <body>
+ 	<h2></h2>
+ </body>
+ </html>
+

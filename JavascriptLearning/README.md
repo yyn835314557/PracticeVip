@@ -53,11 +53,11 @@
 可以在页面中内嵌 Javascript 代码和外部包含 JavaScript 文件
 
  ```
-    <script type="text/javascript">
+<script type="text/javascript">
         function sayScript(){
-            alert("\/script);
+            alert("\/script");
         }
-    </script>
+</script>
  ```
 
 在不包含 async 和 defer 属性，浏览器会按照 <script> 元素在页面中出现的先后顺序对它们依次进行解析。
