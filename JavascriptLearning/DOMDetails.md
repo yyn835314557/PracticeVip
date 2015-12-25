@@ -128,7 +128,7 @@ p{
   </div>
   <form>
   <!--当点击相应按钮，执行相应操作，为按钮添加相应事件-->
-    <input type="button" value="改变颜色" onclick="changeColor()" />  
+    <input type="button" value="改变颜色" onclick="changeColor()" /> 
     <input type="button" value="改变宽高" onclick="changeAppearance()" />
     <input type="button" value="隐藏内容" onclick="hideContent()" />
     <input type="button" value="显示内容" onclick="displayContent()" />
@@ -147,18 +147,15 @@ function changeAppearance(){
     document.getElementById("con").style.height = "50px";
 }
 
-
 //定义"隐藏内容"的函数
 function hideContent(){
     document.getElementById("txt").style.display = "none";
 }
 
-
 //定义"显示内容"的函数
 function displayContent(){
     document.getElementById("txt").style.display = "block";
 }
-
 
 //定义"取消设置"的函数
 function cancel(){
@@ -173,8 +170,7 @@ function cancel(){
 
     }
 }
-
-  </script>
+</script>
 </body>
 </html>
  ```
