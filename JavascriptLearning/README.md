@@ -343,12 +343,26 @@
     </map>
     ```
  
- * 元素提供有关页面的元信息(针对搜索引擎和更新频度的描述和关键词)，元数据总是以名称/值的形式被成对传递的。
-     - 必须属性: content(定义与 http-equiv 或 name 属性相关的元信息)
+ * 元素提供有关页面的元信息(针对搜索引擎和更新频度的描述和关键词)，元数据总是以名称/值的形式被成对传递的: meta。
+     - 必须属性: <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        - content(定义与 http-equiv 或 name 属性相关的元信息),必须包含 `<meta http-equiv="content-type" content="text/html" />`
+        - 始终要和 name 属性或者 http-equiv 属性一起使用
      - 可选属性:
-        - http-equiv
-        - name
-        - scheme
+        - http-equiv: 把content属性关联到HTTP头部,指示服务器在发送实际的文档之前先在要传送给浏览器的 MIME 文档头部包含名称/值对。
+            - `http-euqiv = "content-type" content = "text/html"`
+            - `http-equiv = "expires" content = "31 Dec 2008"`
+            - `http-equiv = "refresh" content="5;url=http://www.w3school.com.cn"` 域名重定向
+            - `http-equiv = "set-cookie"`
+            - `http-equiv = "chrset" content = "utf-8"`
+        - name:
+            - `name="keywords" content="HTML,ASP,PHP,SQL"`
+            - `name="author" content=""`
+            - `name="description" content=""`
+            - `name="generator" content="Sublime Text 3 en"` 定义编辑软件
+            - `name="revises" conent="yanni.you,26/12/15"` 定义创作者
+            - `name="others" content=""`
+        - scheme:
+            - scheme 属性用于指定要用来翻译属性值的方案。此方案应该在由 <head> 标签的 profile 属性指定的概况文件中进行了定义
  * 定义导航链接: nav, `nav>a*3`
  * 链接样式表，定义文档与外部资源的关系 `<head><link rel="stylesheet" type="text/css" href="theme.css /></head>`
  * 定义文档或文章的作者的联系信息: `<address>Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 作者的个人信息</address>`
