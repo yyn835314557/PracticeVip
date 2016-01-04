@@ -107,6 +107,29 @@
 	box-shadow -->
  ```
 
+- Font Attributes:
+
+ ```
+  <style type="text/css">
+	p.ex1{
+		font: 15px arial,sans-serif;
+	}
+	p.ex2{
+		font: italic bold 12px/30px Georgia,serif;
+		/*font: font-style font-variant font-weight font-size/line-height font-family*/
+	}
+  </style>
+  <!-- font-size,font-family is essential
+  font-style: normal/italic/oblique/inherit
+  font-variant: normal/small-caps/inherit
+  font-weight: normal/bold/bolder/lighter
+  font-size/line-height: smaller/larger/length/%/inherit
+  fobt-family: "Times New Roman",Georgia,Serif;
+  font-size-adjust:
+  font-stretch:
+  @font-face: -->
+ ``` 
+
 - Transform 2D/3D Attributes:
 
  ```
@@ -156,6 +179,6 @@
 
  ```CSS
  	<style type="text/css">
- 		s
+ 		
  	</style>
  ```
