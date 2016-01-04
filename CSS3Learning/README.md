@@ -107,6 +107,21 @@
 	box-shadow -->
  ```
 
+- BOX Attributes:
+
+ ```
+ <style type="text/css">
+	div{
+		overflow-x: visible;
+	}
+ </style>
+ <!-- 
+	overflow-x: visible/hidden/scroll/auto/no-display/no-content;
+	overflow-y: visible/hidden/scroll/auto/no-display/no-content;
+
+  -->
+ ```
+
 - Font Attributes:
 
  ```
@@ -129,6 +144,14 @@
   font-stretch:
   @font-face: -->
  ``` 
+
+- Position Attributes:
+
+ ```
+  <style type="text/css">
+	
+  </style>
+ ```
 
 - Transform 2D/3D Attributes:
 
