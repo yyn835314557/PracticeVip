@@ -122,6 +122,49 @@
   -->
  ```
 
+ - Dimension Attributes:
+
+ ```
+   <style type="text/css">
+		div{
+			height: auto;
+			width: auto;
+			max-height: inherit;
+			max-width: inherit;
+			min-height: inherit;
+			min-width: inherit;
+		}
+   </style>
+ ```
+
+- Flexible Box:
+ 
+ ```
+ <style type="text/css">
+	div{
+		width: 350px;
+		height: 200px;
+		border: 1px solid black;
+
+		/* Internet Explorer*/
+		display: -ms-flexbox;
+		-ms-flex-pack:center;
+		-ms-flex-align:center;
+
+		/* Firefox */
+		display: -moz-box;
+		-moz-box-pack: center;
+		-moz-box-align: center;
+		
+		/* Safari, Opera, and Chrome */
+		display: -webkit-box;
+		-webkit-box-pack: center;
+		-webkit-box-align: center;
+
+	}
+ </style>
+ ```
+
 - Font Attributes:
 
  ```
@@ -145,12 +188,98 @@
   @font-face: -->
  ``` 
 
+- Margin Attributes:
+ 
+ ```
+  <style type="text/css">
+	div{
+		margin: 20%;
+		margin-top: 1px;
+		margin-right: 10%;
+		margin-bottom: 1cm;
+		margin-left: 20%;
+	}
+  </style>
+ ```
+
+- Multi-column Attributes
+
+ ```
+  <style type="text/css">
+		div{
+			column-count: 3;
+			/* Firefox */
+			-moz-column-count: 3;
+			/* Safari and Chrome */
+			-webkit-column-count: 3;
+			/*column-width: number|auto;*/
+			/* column spacing */
+			column-gap: 40px;
+			-webkit-column-gap: 100px;
+			-moz-column-gap: 110px; 
+		}
+  </style>
+  <!-- 
+  	column-rule: column-rule-width column-rule-style column-rule-color;
+  	column-rule-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;
+
+  	columns: column-width column-count;
+  	column-width: 2 
+  	column-span: 1|all; -->
+ ```
+ 
+- Padding Attributes:
+ 
+ ```
+  <style type="text/css">
+	p.ex1{padding: 2cm;}
+	p.ex2{padding: 20px 20px 20px 20px;}
+	p.ex3{padding: 20px 20px 20px;}
+	p.ex4{padding: 20% 20p%;}	
+  </style>
+  <!-- 
+	padding-top:
+	padding-right:
+	padding-bottom:
+	padding-left:
+   -->
+ ```
+
 - Position Attributes:
 
  ```
   <style type="text/css">
-	
+	h2{
+		position: absolute;
+		left: 100px;
+		top: 150px;
+		/*right: 20px;*/
+		/*bottom: 10px;*/
+	}
+	img{
+		/* 如果先有"overflow：visible"，clip属性不起作用。*/
+		clip: rect(0px,60px,200px,0px);
+		display: none;
+		/* 绝对定位忽略float属性 */
+		float: right|none|inherit|left;
+		/* 制定元素的左侧或者右侧不允许浮动元素 */
+	}
+	p.clear{
+		/* 制定段落左侧或者右侧不允许浮动元素 */
+		clear: none|both|left|right;
+		left|right|top|bottom: 
+	}
+	div{
+		width: 150px;
+		height: 200p;
+		overflow: visible|scroll|hidden|auto|inherit;
+		visibility: visible|hidden|collapse|inherit; 
+	}
   </style>
+  <!-- 
+	position: static|absolute|fixed|relative|fixed|relative|inherit
+	<span style="cursor:auto|crosshair|default|e-resize|help|mvoe|n-resize|ne-resize|help|move|n-resize|ne-resize|nw-resize|pointer|progress|s-resize|se-resize|sw-resize|text|w-resize|wait"></span>
+   -->
  ```
 
 - Transform 2D/3D Attributes:
