@@ -1,5 +1,14 @@
 # Angular 详解
 
+***
+
+Angular 4大核心特性
+
+* MVC
+* 模块化
+* 指令系统
+* 双向数据绑定
+
 <<!DOCTYPE html>
 <html>
 <head>
