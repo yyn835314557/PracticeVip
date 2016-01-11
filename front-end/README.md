@@ -1,4 +1,4 @@
-# my road to front-end
+# my studying road to front-end
 *it just my leaning experience*
 ***
 
@@ -14,5 +14,7 @@
 	- Resources:
 		- localstorege
 	- console:
+
+- 
 
 
