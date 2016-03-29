@@ -404,3 +404,15 @@
  * 向HTML代码添加一个对象:定义一个嵌入的对象。请使用此元素向您的 XHTML 页面添加多媒体。此元素允许您规定插入 HTML 文档中的对象的数据和参数，以及可用来显示和操作数据的代码
     - param 参数定义用于对象的 run-time 设置
     - 不要对图像使用 <object> 标签，使用<img>标签代替
+
+### format date (yyyy-MM-dd hh:mm:ss)
+
+    ```JavaScript
+    function formateDate(date,format){
+        var paddNum = function(){
+            num += "";
+            return num.replace(/^(\d)$/,"0$1");
+        }
+    }
+    ```
+
