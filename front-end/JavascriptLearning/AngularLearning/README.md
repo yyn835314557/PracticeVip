@@ -19,3 +19,9 @@ Software Development Intern in VIP
 # 调试工具:
 
 - Angular调试插件Batarang
+
+###Problems:
+
+- ng-model: `<div class="remote_div_css" ng-model=""></div>`
+- ng-bind: `<span ng-bind="item.attributes"></span>`
+- {{attribute}}:
