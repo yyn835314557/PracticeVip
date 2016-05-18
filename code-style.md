@@ -2633,9 +2633,7 @@ should have the following content order.
 1.  Contextual media queries with Sass
 1.  Sub selectors as the last part
 
-当使用Sass的嵌套功能的时候，
-重要的是有一个明确的嵌套顺序，
-以下内容是一个SCSS块应具有的顺序。
+当使用Sass的嵌套功能的时候，重要的是有一个明确的嵌套顺序，以下内容是一个SCSS块应具有的顺序。
 
 1. 当前选择器的样式属性
 2. 父级选择器的伪类选择器 (:first-letter, :hover, :active etc)

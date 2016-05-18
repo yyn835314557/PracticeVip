@@ -1,0 +1,76 @@
+#header {
+  color: #333333;
+  border-left: 1px;
+  border-right: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-raduis: 5px;
+  -o-border-radius: 5px;
+  border-radius: 10px;
+}
+#footer {
+  color: #114411;
+  border-color: #7d2717;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-raduis: 10px;
+  -o-border-radius: 10px;
+  border-radius: 20px;
+}
+#header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+#header p {
+  font-size: 12px;
+}
+#header p a {
+  text-decoration: noe;
+}
+#header p a:hover {
+  border-width: 1px;
+}
+#header p a:active {
+  background-color: blue;
+}
+.class1 {
+  one: 1;
+}
+.class1 .class {
+  three: 3;
+}
+.some .selector div {
+  color-1: #008000;
+  color-2: #008000;
+  padding-2: 2;
+  border: #008000;
+  boxer: #008000;
+}
+#header {
+  -moz-box-shadow: 2px 2px 3px #f36;
+  -webkit-box-shadow: 2px 2px 3px #f36;
+  box-shadow: 2px 2px 3px #f36;
+}
+.unimportant {
+  color-1: 1;
+  color-2: 1;
+  padding-2: 2;
+  border: 1;
+  boxer: 1;
+}
+.important {
+  color-1: 2 !important;
+  color-2: 2 !important;
+  padding-2: 2 !important;
+  border: 2 !important;
+  boxer: 2 !important;
+}
+.class {
+  color-2: light;
+  padding-2: #888;
+  color-3: light;
+  padding-3: #888;
+  margin: 2 2 2 2;
+  color: #a2a2a2;
+  display: block;
+}
