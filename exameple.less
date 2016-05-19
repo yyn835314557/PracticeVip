@@ -65,10 +65,12 @@
 }
 // 多参数混合
 // 多个参数可以使用分号或者逗号分隔，推荐使用分号分隔，因为逗号有两重含义：它既可以表示混合的参数，也可以表示一个参数中一组值的分隔符。
-// 使用分号作为参数分隔符意味着可以将逗号分隔的一组值作为一个变量处理。换句话说，如果编译器在混合的定义或者是调用中找到至少一个分号，就会假设参数是使用分号分隔的，所有的逗号都属于参数中的一组值的分隔符。
+// 使用分号作为参数分隔符意味着可以将逗号分隔的一组值作为 一个变量处理 。换句话说，如果编译器在混合的定义或者是调用中找到至少一个分号，就会假设参数是使用分号分隔的，所有的逗号都属于参数中的一组值的分隔符。
 // 2个参数，每个参数都含有通过逗号分隔的一组值的情况：.name(1, 2, 3; something, else)。
 // 3个参数，每个参数只含一个数字的情况：.name(1, 2, 3)。
+
 // 使用一个象征性的分号可以创建一个只含一个参数，但参数包含一组值的混合：.name(1, 2, 3;)。
+
 // 逗号分隔的一组值参数的默认值：.name(@param1: red, blue;)。
 // 使用同样的名字和同样数量的参数定义多个混合是合法的。在被调用时，LESS会应用到所有可以应用的混合上。比如你调用混合时只传了一个参数.mixin(green)，那么所有只强制要求一个参数的混合都会被调用：
 .mixin(@color) {
@@ -144,7 +146,7 @@
 .class {
     .mixin(@switch, #888);
 }
-// guards
+// guards 与匹配值或者匹配参数不同，guards 用来匹配表达式(expression), 类似变成函数的用法
 // .mixin (@a) when (lightness(@a) >= 50%) {
 //     background-color: black;
 // }
@@ -159,4 +161,46 @@
 
 // .truth (@a) when (@a) { ... }
 // .truth (@a) when (@a = true) { ... }
+// .class {
+// 	.truth(40);
+// }
 
+// 几个检查基本类型的函数
+	// - iscolor
+	// - isnumber
+	// - isstring
+	// - iskeyword
+	// - isurl
+
+// 检查一个值(数字)使用了哪个单位
+	// * ispixel
+	// * ispercentage
+	// * isem
+// 使用关键字 and 在 guard 中加入额外条件 或者，使用关键词 not 否定条件；
+// .mixin (@a) when (isnumber(@a)) and (@a > 0) { ... }
+// .mixin (@b) when not (@b > 0) { ... }
+
+
+// 嵌套规则: 层叠样式
+#header{
+	color: black;
+	.navigation{
+		font-size: 12px;
+	}
+	.logo{
+		width: 300px;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+// 注意 & 符号的使用 — 如果你想写串联选择器(作用在同一个标签上 )，而不是写后代选择器(作用在不同标签上 )，就可以用到 & 了。这点对伪类尤其有用如 :hover 和 :focus。
+// 嵌套 Media Queries
+.one {
+	@media (width: 400px){
+		font-size: 1.2em;
+		@media print and color{
+			color: blue;
+		}
+	}
+}

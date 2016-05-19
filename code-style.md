@@ -2646,6 +2646,8 @@ should have the following content order.
 The following example should illustrate how this ordering will achieve a clear structure while making use of the Sass
 parent selector.
 
+下面的例子将会阐述，当使用 Sass parent 选择器会获得  这样的顺序 清晰的结构 
+
 **Recommended**
 ```scss
 .product-teaser {
